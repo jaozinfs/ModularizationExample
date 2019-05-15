@@ -1,0 +1,51 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion Versions.compileSdkVersion
+    defaultConfig {
+        minSdkVersion Versions.minSdkVersion
+        targetSdkVersion Versions.targetSdkVersion
+        versionCode Versions.versionCode
+        versionName Versions.versionName
+        testInstrumentationRunner BuildPlugins.testInstrumentationRunner
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':commom')
+    implementation project(':login')
+    implementation project(':data')
+
+    implementation Libs.support_annotations
+    implementation Libs.support_appcompat_v7
+    implementation Libs.retrofit
+    implementation Libs.retrofit_rxjava_adapter
+    implementation Libs.constraintLayout
+    implementation Libs.navigation
+    implementation Libs.koin
+    implementation Libs.timber
+    implementation Libs.koinViewModel
+
+    implementation Network.httpLoggingInterceptor
+    implementation Network.kotlinCoroutinesRetrofitAdapter
+    implementation Network.retrofitGsonConverter
+
+
+    androidTestImplementation TestLibs.expressoRunner
+    androidTestImplementation TestLibs.espresso
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+
+}
+repositories {
+    mavenCentral()
+}

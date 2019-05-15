@@ -1,0 +1,17 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.joao.studing.login">
+
+
+    <application>
+        <activity
+                android:theme="@style/Theme.MaterialComponents"
+                android:name="com.joao.sutding.login.views.MainActivity">
+            <intent-filter>
+                <action android:name="com.modularization.login.open"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+
+</manifest>

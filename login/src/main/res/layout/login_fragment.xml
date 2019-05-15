@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:com.joao.studing.app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent">
+
+    <EditText android:layout_width="0dp" android:layout_height="wrap_content"
+              android:hint="@string/login_prompt_hint"
+              android:layout_marginTop="8dp"
+              com.joao.studing.app:layout_constraintTop_toTopOf="parent" android:id="@+id/editText"
+              com.joao.studing.app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+              com.joao.studing.app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:layout_marginBottom="8dp"
+              com.joao.studing.app:layout_constraintBottom_toBottomOf="parent"/>
+    <EditText android:layout_width="0dp" android:layout_height="wrap_content"
+              android:hint="@string/password_prompt_hint"
+              com.joao.studing.app:layout_constraintEnd_toEndOf="parent"
+              android:layout_marginEnd="8dp"
+              android:layout_marginBottom="8dp"
+              com.joao.studing.app:layout_constraintBottom_toBottomOf="parent"
+              android:id="@+id/editText2"
+              com.joao.studing.app:layout_constraintTop_toBottomOf="@+id/editText" com.joao.studing.app:layout_constraintStart_toStartOf="parent"
+              android:layout_marginStart="8dp" com.joao.studing.app:layout_constraintHorizontal_bias="0.498"
+              com.joao.studing.app:layout_constraintVertical_bias="0.051"/>
+    <com.google.android.material.button.MaterialButton
+            android:text="@string/login_prompt_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button"
+            com.joao.studing.app:cornerRadius="3dp"
+            android:textColor="@color/colorWhite"
+            com.joao.studing.app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" com.joao.studing.app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            com.joao.studing.app:layout_constraintTop_toBottomOf="@+id/editText2"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+                                                       android:layout_height="30dp"
+                                                       com.joao.studing.app:layout_constraintBottom_toBottomOf="parent"
+                                                       com.joao.studing.app:layout_constraintStart_toStartOf="parent"
+                                                       com.joao.studing.app:layout_constraintEnd_toEndOf="parent"
+                                                       android:background="@color/colorTransparent">
+        <TextView
+                android:text="@string/register_title"
+                android:layout_width="wrap_content"
+                android:theme="@null"
+                android:background="@null"
+                android:textColor="@color/colorWhite"
+                android:layout_height="0dp"
+                android:textSize="9sp"
+                android:gravity="center_vertical"
+                android:id="@+id/button2"
+                com.joao.studing.app:layout_constraintEnd_toEndOf="parent"
+                com.joao.studing.app:layout_constraintStart_toStartOf="parent" com.joao.studing.app:layout_constraintHorizontal_bias="0.5"
+                com.joao.studing.app:layout_constraintTop_toTopOf="parent" com.joao.studing.app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

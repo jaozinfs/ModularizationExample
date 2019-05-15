@@ -1,0 +1,55 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion 28
+
+
+
+    defaultConfig {
+        minSdkVersion 20
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':libraries:ui_components')
+    implementation project(':commom')
+    implementation project(':data')
+
+    implementation Libs.support_annotations
+    implementation Libs.support_appcompat_v7
+    implementation Libs.retrofit
+    implementation Libs.retrofit_rxjava_adapter
+    implementation Libs.constraintLayout
+    implementation Libs.navigation
+    implementation Libs.timber
+    implementation Libs.materialComponents
+    implementation Libs.koin
+    implementation Libs.koinViewModel
+    implementation Libs.kotlinCoroutines
+    implementation Libs.kotlinCoroutinesAndroid
+
+    androidTestImplementation TestLibs.expressoRunner
+    androidTestImplementation TestLibs.espresso
+
+}
+repositories {
+    mavenCentral()
+}

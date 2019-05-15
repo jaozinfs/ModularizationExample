@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:com.joao.studing.app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/login_navigation"
+            com.joao.studing.app:startDestination="@id/welcomeFragment">
+    <fragment
+            android:id="@+id/welcomeFragment"
+            android:label="WelcomeFragment"
+            android:name="com.joao.sutding.login.views.login.LoginFragment"
+            tools:layout="@layout/login_fragment">
+        <action
+                android:id="@+id/action_welcomeFragment_to_registerFragment"
+                com.joao.studing.app:destination="@id/registerFragment"
+                />
+    </fragment>
+
+    <fragment
+            android:id="@+id/registerFragment"
+            android:label="Register Fragment"
+            android:name="com.joao.sutding.login.views.register.RegisterFragment"
+            tools:layout="@layout/register_fragment"/>
+</navigation>
