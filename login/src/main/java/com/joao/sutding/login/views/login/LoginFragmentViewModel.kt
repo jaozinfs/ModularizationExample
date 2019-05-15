@@ -1,12 +1,13 @@
 package com.joao.sutding.login.views.login
 
-import androidx.lifecycle.ViewModel
-import com.joao.commom.data.core.user.UserParams
-import com.joao.sutding.login.domain.user.usecase.UserUseCase
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
 
-class LoginFragmentViewModel( private val userUseCase: UserUseCase ) : ViewModel(){
+import com.joao.commom.data.core.base.BaseViewModel
+import com.joao.commom.data.core.user.UserParams
+import com.joao.commom.data.core.user.entities.User
+import com.joao.commom.data.core.utils.asyncAwait
+import com.joao.sutding.login.domain.user.usecase.UserUseCase
+
+class LoginFragmentViewModel( private val userUseCase: UserUseCase ) : BaseViewModel<User?>(){
 
 
     init {}
@@ -15,9 +16,11 @@ class LoginFragmentViewModel( private val userUseCase: UserUseCase ) : ViewModel
         super.onCleared()
     }
 
-    fun login(email:String, password:String){
-        GlobalScope.launch {
-            userUseCase.execute(UserParams(email, password))
-         }
+    suspend fun login(email:String, password:String){
+       doWorkWithProgress {
+            asyncAwait {
+                userUseCase.execute(UserParams(email, password))
+            }
+       }
     }
 }

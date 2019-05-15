@@ -1,8 +1,8 @@
 package com.joao.data.utils.requestutils
 
-import com.joao.data.utils.exceptions.DataException
-import com.joao.data.utils.exceptions.DataHttpException
-import com.joao.data.utils.exceptions.DataIOException
+import com.joao.commom.data.core.utils.exceptions.DataException
+import com.joao.commom.data.core.utils.exceptions.DataHttpException
+import com.joao.commom.data.core.utils.exceptions.DataIOException
 import kotlinx.coroutines.Deferred
 import retrofit2.HttpException
 import java.io.IOException

@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">commom</string>
+
+    <!-- Error messages -->
+    <string name="activity_dialog_error_message"> Aconteceu um erro interno, tente novamente mais tarde! </string>
+
+    <string name="error_io">An error has ocurred, check your network connection</string>
+    <string name="error_404">Not found</string>
+    <string name="error_http_general">An error has ocurred, try again later</string>
+
 </resources>

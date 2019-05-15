@@ -29,10 +29,18 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
+    implementation Libs.support_annotations
+    implementation Libs.support_appcompat_v7
+    implementation Libs.kotlinCoroutines
+    implementation Libs.kotlinCoroutinesAndroid
+    implementation Libs.timber
+
     implementation Network.httpLoggingInterceptor
     implementation Network.kotlinCoroutinesRetrofitAdapter
     implementation Network.retrofitGsonConverter
     implementation Network.retrofit
+    implementation Libs.kotlinCoroutines
+    implementation Libs.kotlinCoroutinesAndroid
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 

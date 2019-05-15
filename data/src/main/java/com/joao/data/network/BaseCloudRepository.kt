@@ -4,8 +4,8 @@ import com.joao.commom.data.core.user.Repository
 import com.joao.commom.data.core.user.UserParams
 import com.joao.data.network.retrofit.ApiEndpointsImp
 import com.joao.data.utils.requestutils.SynchronousRequestManagerImpl
-import com.joao.data.utils.exceptions.DataHttpException
-import com.joao.data.utils.exceptions.DataIOException
+import com.joao.commom.data.core.utils.exceptions.DataHttpException
+import com.joao.commom.data.core.utils.exceptions.DataIOException
 import kotlinx.coroutines.Deferred
 
 
